@@ -1,7 +1,7 @@
 #========== Configs ==========#
 TEMPLATE = lib
 
-CONFIG += c++17 skip_target_version_ext shared
+CONFIG += skip_target_version_ext shared
 
 DEFINES += QT_DEPRECATED_WARNINGS \
            QT_MESSAGELOGCONTEXT \
@@ -11,9 +11,9 @@ DEFINES += QT_DEPRECATED_WARNINGS \
 TARGET = sigutils
 
 #========== Version ==========#
-VERSION = 1.0.0.0 # major.minor.patch.build
-DEFINES += SIGUTILS_VERSION_MAJOR=1
-DEFINES += SIGUTILS_VERSION_MINOR=0
+VERSION = 0.3.0.0 # major.minor.patch.build
+DEFINES += SIGUTILS_VERSION_MAJOR=0
+DEFINES += SIGUTILS_VERSION_MINOR=3
 DEFINES += SIGUTILS_VERSION_PATCH=0
 
 #========== PRI Files (DO NOT CHANGE ORDER) ==========#
