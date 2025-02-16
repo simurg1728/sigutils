@@ -13,17 +13,8 @@ DEPENDPATH += $${SIGUTILS_BUILD_PATH}
 }
 
 win32 {
-# We use Radioconda's packages
-RADIOCONDA_PATH = C:/Users/user/radioconda
-DEPENDPATH += $${RADIOCONDA_PATH}/Library/bin
-INCLUDEPATH += $${RADIOCONDA_PATH}/Library/include
-
-# Add from Radioconda's packages
-LIBS += -L$${RADIOCONDA_PATH}/Library/lib -lfftw3f
-
-# FIXME: There is a linking issue
-# LIBS += -L$${RADIOCONDA_PATH}/Library/lib -lvolk
-# DEFINES += HAVE_VOLK
+include($$PWD/../libthirdparty/fftwf.pri)
+# include($$PWD/../libthirdparty/volk.pri) # FIXME: There is a linking issue
 
 # Windows sockets
 LIBS += -lws2_32

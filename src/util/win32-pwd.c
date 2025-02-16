@@ -36,6 +36,13 @@ getpwuid(uid_t uid)
   char *homeDirStr = malloc(MAX_PATH);
   if (SUCCEEDED(SHGetFolderPath(NULL, CSIDL_PERSONAL, NULL, 0, homeDirStr))) {
     pw->pw_dir = homeDirStr;
+#ifdef __WIN32__
+    // Add ":" to  C, D
+    if (strlen(homeDirStr) == 1)
+    {
+      strcat(pw->pw_dir, ":");
+    }
+#endif
   } else {
     return NULL;
   }
