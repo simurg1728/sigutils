@@ -14,7 +14,7 @@ DEPENDPATH += $${SIGUTILS_BUILD_PATH}
 
 win32 {
 include($$PWD/../libthirdparty/fftwf.pri)
-# include($$PWD/../libthirdparty/volk.pri) # FIXME: There is a linking issue
+include($$PWD/../libthirdparty/volk.pri)
 
 # Windows sockets
 LIBS += -lws2_32
